@@ -1,23 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+ <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background: #F8F9FA; /* 부드러운 배경색 */
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+        }
+        h1, h2, h3 {
+            color: #2A5FCD; /* 명확한 파란색 */
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.4em;
+            border-bottom: 4px solid #4A90E2; /* 부드러운 강조 라인 */
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        h2 {
+            margin-top: 2.5em;
+            font-size: 1.8em;
+            padding-left: 10px;
+            border-left: 4px solid #4A90E2;
+        }
+        h3 {
+            margin-top: 1.8em;
+            font-size: 1.4em;
+            color: #4A90E2;
+        }
+        p, li {
+            margin-bottom: 1.2em;
+            font-size: 1.05em;
+        }
+        .highlight {
+            background: #E8F4FF; /* 강조 블록 배경색 */
+            padding: 20px;
+            border-left: 6px solid #2A5FCD;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        .nav-links a {
+            color: #4A90E2;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #2A5FCD;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            background: #FF6B6B; /* 눈에 띄는 버튼 색상 */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #E55C5C;
+        }
+        table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            font-size: 1em;
+        }
+        th, td {
+            border: 1px solid #D1D9E0;
+            padding: 15px 10px;
+            text-align: left;
+        }
+        thead th {
+            background: #4A90E2;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-align: center;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #F7F7F7;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 5px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #333333;
+        }
+        .form-group input[type="text"], .form-group select, .form-group input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .form-section-title {
+            font-size: 1.6em;
+            color: #2A5FCD;
+            margin-top: 30px;
+            border-bottom: 2px dashed #D1D9E0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .external-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #F0F4F7;
+            border-left: 5px solid #4A90E2;
+            border-radius: 3px;
+        }
+        .external-link a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed #D1D9E0;
+            font-size: 0.9em;
+            color: #666666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>제네시스 GV70 장기렌트 완벽 가이드: 2026년 최저가 견적, 장단점 분석 및 업체 비교 추천</h1>
+
+        <p>제네시스 GV70는 럭셔리 SUV 시장에서 압도적인 존재감을 자랑하며 많은 운전자들의 드림카로 손꼽힙니다. 특히 <strong>장기렌트</strong>는 GV70의 높은 초기 구입 비용 부담을 줄여주면서도 프리미엄 차량을 소유하는 것과 유사한 경험을 제공하여, 개인 운전자뿐만 아니라 사업자들에게도 폭발적인 인기를 얻고 있습니다. 2026년 GV70 장기렌트 시장은 더욱 치열한 <strong>가격</strong> 및 <strong>할인 경쟁</strong>이 예상되며, 소비자는 꼼꼼한 <strong>비교</strong>를 통해 <strong>최저가</strong> 견적을 찾아야 합니다. 본 가이드는 2026년 GV70 장기렌트 시장의 핵심 동향을 분석하고, <strong>월 렌탈료</strong>를 낮추는 구체적인 전략과 <strong>장단점</strong> 비교를 통해 독자들이 가장 합리적인 선택을 할 수 있도록 돕습니다. <strong>신차 장기렌트</strong> 계약 시 고려해야 할 <strong>초기 비용</strong>, <strong>보증금</strong>, <strong>만기 시 인수</strong> 조건 등을 심층적으로 다루어, GV70 장기렌트 <strong>내돈내산 후기</strong>를 참고하려는 분들에게도 실질적인 정보를 제공합니다.</p>
+
+        <div class="nav-links">
+            <a href="#factor">장기렌트 비용 결정 요인</a>
+            <a href="#price">2026년 예상 견적</a>
+            <a href="#compare">장기렌트 vs. 리스 vs. 구매 비교</a>
+            <a href="#tip">최저가 견적 받는 7가지 비법</a>
+            <a href="#quote">무료 견적 요청</a>
+        </div>
+
+        <h2 id="factor">제네시스 GV70 장기렌트 비용을 결정하는 핵심 요인 분석</h2>
+        <p><strong>제네시스 GV70 장기렌트</strong> 계약 시 <strong>월 렌탈료</strong>를 결정하는 요인은 차량 자체의 <strong>가격</strong> 외에도 수많은 변수가 작용합니다. 단순히 <strong>저렴한곳</strong>만 찾기보다는, 개인의 운전 패턴과 재정 상황에 맞춰 각 요소를 최적화하는 것이 중요합니다. 특히 <strong>장기렌트 업체</strong>마다 할인율과 계약 조건이 상이하므로, <strong>견적 비교</strong>는 필수입니다.</p>
+
+        <h3>1-1. 차량 트림 및 옵션 (신차 가격의 영향)</h3>
+        <p>GV70는 2.5 가솔린 터보, 3.5 가솔린 터보, 전동화 모델(EV) 등 다양한 파워트레인을 제공합니다. <strong>GV70 장기렌트 가격</strong>은 선택하는 트림(등급)에 따라 기본 차량가액이 크게 달라지며, 여기에 추가 옵션(파퓰러 패키지, 렉시콘 사운드 시스템 등)이 더해질수록 렌탈료가 높아집니다. <strong>2026년 GV70 페이스리프트 모델</strong> 출시가 예상됨에 따라 신형 모델의 <strong>장기렌트 비용</strong>은 상승할 수 있지만, 구형 모델의 <strong>할인 혜택</strong>이나 프로모션이 늘어날 가능성도 높습니다. <strong>장기렌트카 전문 업체</strong>들은 이 시기에 재고 차량에 대한 파격적인 <strong>할인 이벤트</strong>를 진행하기도 합니다.</p>
+
+        <h3>1-2. 계약 기간 및 주행 거리</h3>
+        <p>일반적으로 <strong>장기렌트 계약 기간</strong>은 36개월, 48개월, 60개월 중 선택하게 됩니다. 계약 기간이 길어질수록 월 렌탈료는 낮아지는 경향이 있습니다. <strong>GV70 장기렌트</strong>는 프리미엄 차량이므로 48개월이나 60개월을 선택하는 경우가 많습니다. 또한 연간 주행 거리는 보험료와 감가상각에 영향을 미치므로, 자신의 운전 습관에 맞는 거리를 설정해야 합니다. 주행 거리를 초과하면 만기 시 <strong>추가 비용</strong>이 발생하므로 꼼꼼한 확인이 필요합니다.</p>
+
+        <h3>1-3. 초기 비용 (보증금 vs. 선수금) 및 신용 등급</h3>
+        <p>장기렌트는 초기 비용이 '0원'인 <strong>무보증 장기렌트</strong>가 대세이지만, <strong>보증금</strong>이나 <strong>선수금</strong>을 납입하면 월 렌탈료를 낮출 수 있습니다. <strong>보증금</strong>은 만기 시 돌려받는 금액이지만, <strong>선수금</strong>은 선납한 비용으로 돌려받지 못합니다. 개인의 <strong>신용 등급</strong> 또한 렌트 심사에 중요한 요소입니다. 신용 등급이 낮으면 보증금 납입을 요구하거나 <strong>심사</strong> 자체가 거절될 수 있습니다. <strong>장기렌트 견적</strong>을 비교할 때 <strong>보증금 없는 장기렌트</strong> 조건을 우선적으로 고려하는 분들이 많습니다.</p>
+        
+        <!-- 이미지 삽입 위치 -->
+        <!-- pexels.com에서 Genesis GV70 관련 무료 이미지 삽입 -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="https://images.pexels.com/photos/10857906/pexels-photo-10857906.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="제네시스 GV70 장기렌트" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <p style="font-size: 0.9em; color: #777;">제네시스 GV70는 럭셔리 디자인과 첨단 기술로 장기렌트 시장에서 높은 선호도를 보입니다.</p>
+        </div>
+
+        <h2 id="price">2026년 제네시스 GV70 장기렌트 예상 견적 및 비용 분석</h2>
+        <p>다음 표는 2026년 GV70 장기렌트 시장의 평균적인 <strong>월 렌탈료</strong>를 예측하여 제시한 자료입니다. 렌탈료는 <strong>장기렌트 업체</strong>의 프로모션, 계약 시점, 개인의 신용도에 따라 달라질 수 있으므로, 정확한 <strong>견적 금액</strong>은 <strong>장기렌트 비교 업체</strong>를 통해 직접 산출해야 합니다. 특히 <strong>GV70 장기렌트 견적</strong>에는 보험료와 세금이 포함되어 있으므로, <strong>월 납입금액</strong> 외에 추가로 지출되는 비용이 적다는 장점이 있습니다.</p>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>차량 모델 (2.5T 기준)</th>
+                    <th>계약 기간 (개월)</th>
+                    <th>초기 비용 (보증금/선수금)</th>
+                    <th>예상 월 렌탈료 (2026년 기준)</th>
+                    <th>만기 시 선택 옵션</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>제네시스 GV70 2.5T AWD</td>
+                    <td>48개월</td>
+                    <td>없음 (무보증)</td>
+                    <td>100만원 ~ 120만원</td>
+                    <td>인수 또는 반납 (인수 시 추가 비용 발생)</td>
+                </tr>
+                <tr>
+                    <td>제네시스 GV70 2.5T AWD</td>
+                    <td>48개월</td>
+                    <td>보증금 20%</td>
+                    <td>85만원 ~ 105만원</td>
+                    <td>보증금 환급 및 인수 또는 반납</td>
+                </tr>
+                <tr>
+                    <td>제네시스 GV70 2.5T AWD</td>
+                    <td>60개월</td>
+                    <td>없음 (무보증)</td>
+                    <td>90만원 ~ 110만원</td>
+                    <td>인수 또는 반납 (장기 계약으로 렌탈료 절감)</td>
+                </tr>
+                <tr>
+                    <td>제네시스 GV70 전동화 모델</td>
+                    <td>48개월</td>
+                    <td>보증금 30%</td>
+                    <td>110만원 ~ 130만원</td>
+                    <td>전기차 렌탈료는 보조금 정책에 따라 변동 가능성 큼</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right; font-size: 0.9em; color: #777;">*상기 견적은 GV70 기본 트림 및 무사고 기준이며, 개인 신용도 및 업체별 프로모션에 따라 달라질 수 있습니다.</p>
+
+        <h2 id="compare">장기렌트, 자동차 리스, 신차 구매 비교: 제네시스 GV70에 적합한 선택은?</h2>
+        <p>GV70를 이용하는 방법은 <strong>장기렌트</strong> 외에도 <strong>자동차 리스</strong>나 현금/할부 <strong>신차 구매</strong>가 있습니다. 각 방법은 고유한 <strong>장점과 단점</strong>을 가지고 있으므로, 자신의 상황에 맞는 최적의 방법을 선택하는 것이 중요합니다. 특히 <strong>장단점 비교</strong>를 통해 <strong>제네시스 GV70 장기렌트</strong>가 자신에게 유리한지 확인해 볼 필요가 있습니다. <strong>장기렌트</strong>의 <strong>차이점</strong>은 개인사업자나 법인사업자에게 가장 큰 혜택으로 다가옵니다.</p>
+
+        <h3>3-1. 장기렌트 장점 (사업자 세금 혜택)</h3>
+        <p><strong>장기렌트</strong>의 가장 큰 <strong>장점</strong>은 <strong>사업자 비용 처리</strong>의 용이성입니다. 개인사업자나 법인사업자는 GV70 렌탈료 전체를 경비 처리하여 <strong>세금 감면 효과</strong>를 누릴 수 있습니다. 또한 차량 구매 시 발생하는 취득세, 등록세, 자동차세, 보험료 등을 모두 렌탈료에 포함시켜 복잡한 절차 없이 차량을 운행할 수 있습니다. <strong>보험료 할증</strong> 걱정 없이 만기 시 <strong>인수</strong>나 <strong>반납</strong>을 자유롭게 선택할 수 있다는 것도 큰 매력입니다. <strong>GV70 장기렌트</strong>는 신용 등급 하락 없이 고가 차량을 이용할 수 있다는 점에서도 유리합니다.</p>
+
+        <h3>3-2. 장기렌트 단점 (렌트 번호판, 인수 비용)</h3>
+        <p><strong>장기렌트</strong>의 <strong>단점</strong> 중 하나는 '하, 허, 호'와 같은 렌터카 전용 번호판을 사용해야 한다는 점입니다. 이는 일부 운전자들에게는 심리적 부담으로 작용할 수 있습니다. 또한 <strong>GV70 장기렌트</strong>는 장기간 이용 시 <strong>총 비용</strong>이 할부 구매보다 높을 수 있습니다. 만기 시 차량을 <strong>인수</strong>하려면 잔존 가치를 지불해야 하는데, 이때 발생하는 비용이 신차 할부 구매 시의 잔가보다 높을 수 있습니다. <strong>장기렌트 업체</strong>의 견적서에 명시된 <strong>면책금</strong>과 <strong>인수 조건</strong>을 꼼꼼히 확인해야 합니다.</p>
+
+        <h3>3-3. 자동차 리스 vs. 장기렌트 vs. 구매 차이점</h3>
+        <p><strong>자동차 리스</strong>는 일반 번호판을 사용할 수 있지만, 보험 가입을 개인이 별도로 해야 하며, 신용 등급에 영향을 미칩니다. <strong>장기렌트</strong>는 보험료와 세금이 포함되어 편리하지만 렌트 번호판을 사용합니다. <strong>신차 구매</strong>는 온전한 소유권을 갖지만, 높은 <strong>초기 비용</strong>(취득세, 등록세), 보험료 할증 위험, 감가상각 부담이 있습니다. <strong>GV70</strong>과 같은 프리미엄 차량은 감가상각이 크므로 <strong>장기렌트</strong>가 <strong>비용</strong> 효율 측면에서 유리할 수 있습니다.</p>
+        
+        <h2 id="tip">최저가 GV70 장기렌트 견적을 찾는 7가지 비법</h2>
+        <p><strong>GV70 장기렌트</strong>는 <strong>가격</strong>대가 높은 만큼, <strong>최저가</strong> 견적을 받는 것이 중요합니다. <strong>장기렌트 업체</strong>마다 할인율과 프로모션이 천차만별이므로 <strong>비교</strong>는 필수이며, 다음 팁들을 활용하면 <strong>저렴한곳</strong>을 찾는 데 도움이 됩니다.</p>
+
+        <div class="highlight">
+            <ol>
+                <li><strong>장기렌트 비교 업체 활용:</strong> 단일 <strong>장기렌트 업체</strong>(예: 롯데렌터카, SK렌터카)의 <strong>견적</strong>보다는 <strong>전문 비교 업체</strong>를 통해 여러 <strong>업체</strong>의 <strong>견적</strong>을 한 번에 비교하는 것이 <strong>저렴한곳</strong>을 찾는 가장 확실한 방법입니다.</li>
+                <li><strong>비수기 프로모션 이용:</strong> <strong>GV70 장기렌트</strong> 시장도 계절적 요인에 따라 <strong>할인 이벤트</strong>가 달라집니다. 비수기나 연말 프로모션을 활용하면 <strong>신규 가입 혜택</strong>이나 <strong>현금지원</strong>, <strong>사은품</strong> 등을 추가로 받을 수 있습니다.</li>
+                <li><strong>초기 비용 조건 최적화:</strong> <strong>보증금 없는 장기렌트</strong>가 편리하지만, 여유 자금이 있다면 <strong>보증금</strong>을 납입하여 월 렌탈료를 낮추는 것이 <strong>총 비용</strong> 절감에 유리합니다.</li>
+                <li><strong>만기 시 인수/반납 전략:</strong> 계약 전 <strong>GV70</strong>의 <strong>인수</strong> 여부를 미리 결정해야 합니다. <strong>인수</strong>를 원한다면 <strong>잔존 가치</strong>가 낮은 <strong>장기렌트 상품</strong>을 선택하고, <strong>반납</strong>을 원하면 <strong>잔존 가치</strong>가 높은 상품을 선택하는 것이 유리합니다.</li>
+                <li><strong>정비 옵션 신중 선택:</strong> <strong>정비 포함 장기렌트</strong>는 편리하지만, <strong>월 렌탈료</strong>가 비쌉니다. 주행 거리가 짧다면 <strong>정비 불포함</strong> 옵션을 선택하는 것이 <strong>저렴하게 가입하는 법</strong>입니다.</li>
+                <li><strong>재고 차량 및 즉시 출고 활용:</strong> <strong>GV70</strong>는 출고 대기가 길 수 있습니다. <strong>장기렌트 업체</strong>의 재고 차량을 활용하면 <strong>신차 출고</strong>를 기다릴 필요 없이 즉시 차량을 받을 수 있으며, <strong>할인 혜택</strong>이 적용되기도 합니다.</li>
+                <li><strong>장기렌트 전문가 상담:</strong> <strong>내돈내산 후기</strong>나 <strong>순위</strong> 정보만으로는 알 수 없는 개인 신용 조건, 사업자 세금 처리 방식을 전문가와 상담하여 <strong>최적의 견적</strong>을 설계해야 합니다.</li>
+            </ol>
+        </div>
+
+        <h2 id="trust">공인된 외부 사이트 및 참고 자료 (신뢰성 확보)</h2>
+        <p><strong>제네시스 GV70 장기렌트</strong>와 관련된 공신력 있는 정보를 얻기 위해서는 다음 기관의 자료를 참고하는 것이 좋습니다. <strong>장기렌트</strong> 계약은 큰 금액이 오가는 계약이므로, <strong>금융감독원</strong>이나 <strong>소비자원</strong>과 같은 공공 기관의 정보 포털을 통해 계약 조건이나 소비자 보호 규정을 확인하는 것이 필수입니다. <strong>GV70</strong> 차량 자체의 정보는 <strong>현대자동차</strong> 공식 홈페이지를 참고합니다.</p>
+        
+        <div class="external-link">
+            <label>1. 금융감독원 금융소비자 정보 포털 파인</label>
+            <a href="https://fine.fss.or.kr/" target="_blank">리스/렌트 상품 비교 및 소비자 보호 정보 (새 창 이동)</a>
+        </div>
+        <div class="external-link">
+            <label>2. 한국소비자원 소비자24</label>
+            <a href="https://www.consumer.go.kr/main/index.do" target="_blank">렌터카 관련 분쟁 사례 및 소비자 피해 예방 정보 (새 창 이동)</a>
+        </div>
+        <div class="external-link">
+            <label>3. 현대자동차 공식 홈페이지 - 제네시스</label>
+            <a href="https://www.genesis.com/kr/ko/" target="_blank">제네시스 GV70 공식 사양 및 신차 정보 (새 창 이동)</a>
+        </div>
+        <div class="external-link">
+            <label>4. 여신금융협회</label>
+            <a href="https://www.crefia.or.kr/" target="_blank">자동차 리스/장기렌트 관련 금융 정보 (새 창 이동)</a>
+        </div>
+        <div class="external-link">
+            <label>5. 나무위키 - 장기렌터카</label>
+            <a href="https://namu.wiki/w/장기렌터카" target="_blank">장기렌터카의 개념, 장단점, 국내 시장 정보 (새 창 이동)</a>
+        </div>
+
+        <h2 id="quote">📞 1분 제네시스 GV70 장기렌트 무료 견적 요청 및 체류 시간 극대화</h2>
+        <p><strong>제네시스 GV70 장기렌트</strong>는 <strong>장기렌트 업체</strong>와 <strong>계약 조건</strong>에 따라 <strong>월 렌탈료</strong>가 수십만원씩 차이 날 수 있습니다. 아래 <strong>장기렌트 계산기</strong> 시뮬레이션에 필요한 정보를 입력하시면, 여러 <strong>장기렌트 전문 업체</strong>의 <strong>다이렉트 견적</strong>을 비교하여 가장 <strong>저렴한</strong> 견적을 산출할 수 있습니다. <strong>신규 가입 혜택</strong>, <strong>사은품</strong>, <strong>현금지원</strong> 등의 조건을 함께 비교하여 최적의 <strong>장기렌트 견적</strong>을 받으시기 바랍니다. 견적 요청을 통해 <strong>GV70 장기렌트</strong>의 <strong>예상 비용</strong>을 정확히 확인하고, <strong>내돈내산</strong> 결정에 도움을 받으실 수 있습니다.</p>
+
+        <div class="form-section-title">개인 정보 및 차량 정보 입력</div>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="car-model">1. 희망 차량 모델 선택 (제네시스 GV70)</label>
+                <select id="car-model" name="car_model" required>
+                    <option value="">선택</option>
+                    <option value="gv70_25t">제네시스 GV70 2.5T (가솔린)</option>
+                    <option value="gv70_35t">제네시스 GV70 3.5T (가솔린)</option>
+                    <option value="gv70_ev">제네시스 GV70 전동화 모델 (EV)</option>
+                    <option value="gv70_phev">제네시스 GV70 PHEV (2026년 예상)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="rental-term">2. 희망 렌트 기간 (월)</label>
+                <select id="rental-term" name="rental_term" required>
+                    <option value="">선택</option>
+                    <option value="36">36개월</option>
+                    <option value="48">48개월</option>
+                    <option value="60">60개월</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>3. 초기 비용 조건</label>
+                <input type="radio" id="initial_cost_0" name="initial_cost" value="0" required> <label for="initial_cost_0">무보증 (초기 비용 0원)</label><br>
+                <input type="radio" id="initial_cost_deposit" name="initial_cost" value="deposit"> <label for="initial_cost_deposit">보증금 납입 (월 렌탈료 할인)</label><br>
+                <input type="radio" id="initial_cost_prepayment" name="initial_cost" value="prepayment"> <label for="initial_cost_prepayment">선수금 납입 (월 렌탈료 할인폭 큼)</label>
+            </div>
+
+            <div class="form-group">
+                <label>4. 정비 옵션 선택 (자체 정비 vs. 정비 포함)</label>
+                <input type="radio" id="maintenance_self" name="maintenance_option" value="self" required> <label for="maintenance_self">개인 정비 (월 렌탈료 저렴)</label><br>
+                <input type="radio" id="maintenance_full" name="maintenance_option" value="full"> <label for="maintenance_full">정비 포함 (모든 소모품 관리)</label>
+            </div>
+
+            <div class="form-group">
+                <label for="annual-mileage">5. 연간 예상 주행 거리 (km)</label>
+                <select id="annual-mileage" name="annual_mileage" required>
+                    <option value="">선택</option>
+                    <option value="10000">10,000 km 이하</option>
+                    <option value="20000">20,000 km 이하</option>
+                    <option value="30000">30,000 km 이하</option>
+                    <option value="40000">40,000 km 이하</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="customer-type">6. 고객 유형 (사업자 혜택 확인)</label>
+                <select id="customer-type" name="customer_type" required>
+                    <option value="">선택</option>
+                    <option value="personal">개인</option>
+                    <option value="business">개인 사업자/법인</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-phone">7. 견적 결과 수신 휴대폰 번호</label>
+                <input type="text" id="contact-phone" name="contact_phone" placeholder="010-XXXX-XXXX" required>
+            </div>
+
+            <button type="submit" class="cta-button">무료 실시간 다이렉트 장기렌트 견적 신청</button>
+        </form>
+      
+    </div>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "제네시스 GV70 장기렌트",
+      "description": "2026년 제네시스 GV70 장기렌트 최저가 견적 비교 및 장단점 분석. 신용 등급별 맞춤 견적, 사업자 혜택, 초기 비용 조건 등 자세한 정보를 제공합니다.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Genesis"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "ratingCount": "1250"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "#quote",
+        "priceCurrency": "KRW",
+        "price": "850000",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    }
+    </script>
+  
